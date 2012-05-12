@@ -7,7 +7,6 @@ include_once('Events.inc.php');
 function UserControl($link='') {
 	global $PHP_SELF;
 	global $HTTP_SERVER_VARS;
-	global $PagePrefix;
 
 	$User = SessionGet("CurrentUser");
 	$UserId = $User->Id;
@@ -34,53 +33,53 @@ function UserIdentified() {
 function UserVerified() {
 	if (!UserIdentified())
 		return false;
-	$User = UserActual();
+	$User = UserCurrent();
 	if (IsSet($User))
 		return true;
 	return false;
 }
 
-function UserActual() {
+function UserCurrent() {
 	return SessionGet("CurrentUser");
 }
 
 function UserId() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->Id);
 }
 
 function UserName() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->UserName);
 }
 
 function UserPassword() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->Password);
 }
 
 function UserFirstName() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->FirstName);
 }
 
 function UserLastName() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->LastName);
 }
 
 function UserGenre() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->Genre);
 }
 
 function UserEmail() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->Email);
 }
 
 function UserIsAdministrator() {
-	$User = UserActual();
+	$User = UserCurrent();
 	return($User->IsAdministrator);
 }
 
@@ -120,7 +119,7 @@ function UserLogout() {
 	SessionDestroy();
 }
 
-function UserTranslate($Id) {
+function UserTranslateId($Id) {
 	global $UsersTable;
 
 	if (!$Id)
