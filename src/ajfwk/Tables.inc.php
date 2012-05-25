@@ -2,9 +2,9 @@
 
 function TableOpen($titles='',$width='') {
 	if ($width)
-		echo "<table width='$width' cellspacing=1 cellpadding=2>\n";
+		echo "<table width='$width'>\n";
 	else
-		echo "<table cellspacing=1 cellpadding=2>\n";	
+		echo "<table>\n";	
 
 	if (is_array($titles)) {
 		echo "<tr>\n";

@@ -9,7 +9,7 @@
 
 	for ($k = 1; $k <= 10; $k++) {
 		RowOpen();
-		DatumLinkGenerate($k,"table.php?Id=".$k);
+		DatumLinkGenerate($k,"view.php?Id=".$k);
 		DatumGenerate('Name ' . $k);
 		DatumGenerate('Address ' . $k);
 		DatumGenerate('City ' . $k);
