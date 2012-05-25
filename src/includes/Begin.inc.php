@@ -18,7 +18,7 @@
 <META name="owner" content="Angel J Lopez">
 <META name="robot" content="index, follow">
 
-<link rel="stylesheet" href="<? echo $Page->Prefix; ?>styles/style.css">
+<link rel="stylesheet" href="<? echo $Page->Prefix; ?>styles/style2.css">
 <?
 	if ($Page->FileJs)
 		echo "<script language='javascript' src='{$Page->Prefix}js/{$Page->FileJs}'></script>\n";

@@ -1,14 +1,16 @@
 
 BODY {
 	Font-Family: Verdana, Helvetica, sans-serif;
-	Font-size: 8pt;
+	Font-size: 14pt;
 	Color: black;	
 	BACKGROUND-COLOR: white;
+	margin: 0.5em;
+	min-width:655px;
 }
 
 P {
 	Font-Family: Verdana, Helvetica, sans-serif;
-	Font-size: 10pt;
+	Font-size: 14pt;
 	Color: black;	
 }
 
@@ -103,23 +105,8 @@ XMP {
 	Font-size: 10pt;
 }
 
-.topheader {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #FFFFFF;
-	background: #006600;
-	text-decoration: none;
-}
-
 .left {
 	background: #eeeeee;
-}
-
-.sitetitle {
-	Font-Family: Arial;
-	Font-size: 20pt;
-	font-weight: bold;
-	color: black;
 }
 
 .datum {
@@ -151,13 +138,6 @@ XMP {
 	color: rgb(0,128,0);
 }
 
-.bottom {
-	Font-Family: Verdana, Arial, Helvetica;
-	Font-size: 9pt;
-	background: #c0c0c0;
-	color: rgb(0,0,0);
-}
-
 .pagetext {
 	Font-Family: Verdana, Arial;
 	Font-size: 10pt;
@@ -169,7 +149,13 @@ XMP {
 	font-size: 8pt;
 	color: #000000;
 	text-decoration: none;	
-	background: black;
+	background: black;	
+	/*
+	margin-left: auto;
+	margin-right: auto;
+	*/
+	width: 120px;
+	margin-left: 10px;
 }
 
 .menutitle {
@@ -265,3 +251,45 @@ XMP {
 .HeaderU:active {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #FFFFFF; text-decoration: none; }
 
 
+/* MSIE display:inline-block is to make sure MSIE doesn't paint the backround above the containers, the overflow declaration is to make sure the containers do not drop below siblings if content pushes the width (in modern browsers it doesn't drop, but it spawns an orizontal scrollbar)  */
+#header,#subheader,#menu,#content,#footer {overflow:hidden;display:inline-block}
+#header,#subheader,#footer {width:100%} /* safari and opera need this */
+
+#header {
+	Font-Family: Arial;
+	Font-size: 20pt;
+	font-weight: bold;
+	color: black;
+	padding: 10px 0;
+}
+
+#content {
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+	float:left;
+}
+
+#menu {
+	width: 140px;
+	float:left;
+	padding: 10px 0;
+}
+
+#subheader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #FFFFFF;
+	background: #006600;
+	text-decoration: none;
+	padding-left: 0.5em;
+}
+
+#footer {
+	Font-Family: Verdana, Arial, Helvetica;
+	Font-size: 10pt;
+	background: #c0c0c0;
+	color: rgb(0,0,0);
+	padding: 0.1em;
+	text-align: center;
+	clear: left;
+}
